@@ -1,0 +1,126 @@
+.about {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4A90E2, #87CEEB);
+  border-radius: 2px;
+}
+
+.about-text {
+  margin-top: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.15);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.value-item h4 {
+  font-size: 1.2rem;
+  color: #4A90E2;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.value-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.about-image-placeholder {
+  width: 100%;
+  aspect-ratio: 5/4;
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #cbd5e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.about-image-placeholder p {
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 968px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

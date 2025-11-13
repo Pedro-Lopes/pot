@@ -1,0 +1,251 @@
+.hero {
+  background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+  padding: 4rem 2rem;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeInLeft 0.8s ease;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-btn {
+  background-color: #ffffff;
+  color: #4A90E2;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: #f8f9fa;
+}
+
+.hero-image {
+  animation: fadeInRight 0.8s ease;
+  position: relative;
+}
+
+.hero-images-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-card {
+  position: absolute;
+  width: 350px;
+  height: 460px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+.hero-image-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.image-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image-carousel .image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.3), rgba(176, 224, 230, 0.3));
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(74, 144, 226, 0.4);
+  backdrop-filter: blur(5px);
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.image-carousel .image-placeholder.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-image-1 {
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  animation: floatImage1 3s ease-in-out infinite;
+}
+
+.hero-image-2 {
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  animation: floatImage2 3s ease-in-out infinite;
+}
+
+.hero-image-card .image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(135, 206, 235, 0.3), rgba(176, 224, 230, 0.3));
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(74, 144, 226, 0.4);
+  backdrop-filter: blur(5px);
+  gap: 10px;
+}
+
+.hero-image-card .image-placeholder p {
+  color: #4A90E2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero-image-card .image-placeholder span {
+  color: #357ABD;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@keyframes floatImage1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatImage2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .hero {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+  .hero-images-wrapper {
+    height: 400px;
+  }
+
+  .hero-image-card {
+    width: 220px;
+    height: 300px;
+  }
+
+  .hero-image-1 {
+    top: 10px;
+    left: 10px;
+  }
+
+  .hero-image-2 {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
