@@ -1,6 +1,6 @@
 .contact {
-  padding: 5rem 2rem;
-  background-color: #ffffff;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
 }
 
 .contact-container {
@@ -66,19 +66,21 @@
 
 .form-group input,
 .form-group textarea {
-  padding: 0.9rem;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
+  background-color: #f8f9fa;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #4A90E2;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+  background-color: #ffffff;
 }
 
 .form-group textarea {
@@ -90,18 +92,25 @@
   background: linear-gradient(135deg, #4A90E2, #357ABD);
   color: white;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 1.125rem 2.5rem;
+  border-radius: 12px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 1rem;
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.25);
+  letter-spacing: 0.5px;
 }
 
 .form-submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
+  background: linear-gradient(135deg, #357ABD, #2c5fa0);
+}
+
+.form-submit-btn:active {
+  transform: translateY(-1px);
 }
 
 .contact-info {
@@ -111,16 +120,18 @@
 }
 
 .info-card {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 2rem;
+  border-radius: 16px;
   border-left: 4px solid #4A90E2;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .info-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+  border-left-width: 6px;
 }
 
 .info-icon {
