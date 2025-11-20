@@ -122,11 +122,16 @@ const Contact = () => {
             </div>
 
             <div className="map-container">
-              {/* Área reservada para mapa - pode usar iframe do Google Maps */}
-              <div className="map-placeholder">
-                <p>📍 Mapa</p>
-                <span>Integrar Google Maps aqui</span>
-              </div>
+              <iframe
+                src="https://www.google.com/maps?q=-22.961920312849735,-42.99115587368746&hl=pt-BR&z=15&output=embed"
+                width="100%"
+                height="300"
+                style={{ border: 0, borderRadius: '10px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Clínica"
+              ></iframe>
             </div>
           </div>
         </div>
