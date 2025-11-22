@@ -1,30 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aqui você implementaria o envio do formulário
-    console.log('Formulário enviado:', formData);
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
-
   return (
     <section className="contact" id="contato">
       <div className="contact-container">
@@ -35,67 +12,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-form-wrapper">
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Nome Completo</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Digite seu nome"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">E-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="seu@email.com"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="phone">Telefone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="(00) 00000-0000"
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">Mensagem</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Como podemos ajudá-lo?"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="form-submit-btn">
-                Enviar Mensagem
-              </button>
-            </form>
-          </div>
-
+        <div className="contact-content-centered">
           <div className="contact-info">
             <div className="info-card">
               <div className="info-icon">📍</div>
@@ -120,19 +37,19 @@ const Contact = () => {
                 Sábado: 8h às 12h
               </p>
             </div>
+          </div>
 
-            <div className="map-container">
-              <iframe
-                src="https://www.google.com/maps?q=-22.961920312849735,-42.99115587368746&hl=pt-BR&z=15&output=embed"
-                width="100%"
-                height="300"
-                style={{ border: 0, borderRadius: '10px' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Clínica"
-              ></iframe>
-            </div>
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps?q=-22.961920312849735,-42.99115587368746&hl=pt-BR&z=15&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0, borderRadius: '10px' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização da Clínica"
+            ></iframe>
           </div>
         </div>
       </div>
