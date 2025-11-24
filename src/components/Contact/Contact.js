@@ -23,8 +23,8 @@ const Contact = () => {
             <div className="info-card">
               <div className="info-icon">📞</div>
               <h3>WhatsApp</h3>
-              <p>(00) 00000-0000</p>
-              <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
+              <p>(21) 98309-9482</p>
+              <a href="https://wa.me/5521983099482" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
                 Chamar no WhatsApp
               </a>
             </div>
