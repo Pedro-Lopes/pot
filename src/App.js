@@ -5,6 +5,7 @@ import Services from './components/Services/Services';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
