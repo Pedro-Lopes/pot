@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import './App.css';
-//teste
+//teste 2
 function App() {
   return (
     <div className="App">
