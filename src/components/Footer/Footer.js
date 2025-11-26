@@ -29,17 +29,6 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h4 className="footer-subtitle">Serviços</h4>
-            <ul className="footer-list">
-              <li><a href="#servicos">Pedagogia</a></li>
-              <li><a href="#servicos">Reforço Escolar</a></li>
-              <li><a href="#servicos">Nutricionista</a></li>
-              <li><a href="#servicos">Psicólogo</a></li>
-              <li><a href="#servicos">Terapia</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
             <h4 className="footer-subtitle">Links Rápidos</h4>
             <ul className="footer-list">
               <li><a href="#inicio">Início</a></li>
